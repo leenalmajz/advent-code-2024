@@ -29,9 +29,11 @@ def read_input (file_path: str) -> Tuple[List[int], List[int]]:
     list1.sort(), list2.sort()
     
     return list1, list2
-\
-list1, list2 = read_input('day-1/input.txt')
 
-total_distance = sum_of_distances(list1, list2)
+if __name__ == "__main__" :
+    
+    list1, list2 = read_input('day-1/input.txt')
 
-print(total_distance)
+    total_distance = sum_of_distances(list1, list2)
+
+    print(total_distance)
