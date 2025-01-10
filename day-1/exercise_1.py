@@ -3,8 +3,7 @@ from typing import List, Tuple
 def sum_of_distances(list1: List[int], list2: List[int]) -> int:
     '''Find the total distance between two lists of integers'''
 
-    list1.sort()
-    list2.sort()
+    list1.sort(), list2.sort()
 
     difference = [abs(a-b) for a,b in zip(list1, list2)]
     
@@ -25,8 +24,6 @@ def read_input (file_path: str) -> Tuple[List[int], List[int]]:
         location_ID = location_IDs.strip().split()
         list1.append(int(location_ID[0]))
         list2.append(int(location_ID[1]))
-    
-    list1.sort(), list2.sort()
     
     return list1, list2
 
